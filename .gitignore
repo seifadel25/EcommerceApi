@@ -1,0 +1,30 @@
+# .NET
+*.obj
+*.dll
+*.exe
+*.pdb
+*.user
+*.vscode
+*.vs
+bin/
+obj/
+
+# Node.js
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# IDE and Editor files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.suo
+*.user
+*.bak
+*.cache
+*.log
+*.npmrc
+*.eslintcache
