@@ -1,23 +1,31 @@
 {
   "Files": [
     {
-      "Id": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Breakfast 1.png",
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Breakfast 1.png",
       "PackagePath": "staticwebassets\\images\\Breakfast 1.png"
     },
     {
-      "Id": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Coffee 1.png",
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Coffee 1.png",
       "PackagePath": "staticwebassets\\images\\Coffee 1.png"
     },
     {
-      "Id": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsCider 1.png",
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsCider 1.png",
       "PackagePath": "staticwebassets\\images\\DonutsCider 1.png"
     },
     {
-      "Id": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\pexels-mariana-kurnyk-1756060.jpg",
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsFilled 1.png",
+      "PackagePath": "staticwebassets\\images\\DonutsFilled 1.png"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\FilledDonuts 1.png",
+      "PackagePath": "staticwebassets\\images\\FilledDonuts 1.png"
+    },
+    {
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\pexels-mariana-kurnyk-1756060.jpg",
       "PackagePath": "staticwebassets\\images\\pexels-mariana-kurnyk-1756060.jpg"
     },
     {
-      "Id": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\wpi-Cookies 1.png",
+      "Id": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\wpi-Cookies 1.png",
       "PackagePath": "staticwebassets\\images\\wpi-Cookies 1.png"
     },
     {

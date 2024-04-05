@@ -73,46 +73,8 @@ public class ProductsController : ControllerBase
 
         return Ok(product);
     }
-
-    // POST: /Products
-    // [HttpPost("upload")]
-    // public async Task<IActionResult> UploadImage([FromForm] IFormFile image)
-    // {
-    //     if (image == null || image.Length == 0)
-    //     {
-    //         return BadRequest("Upload a file.");
-    //     }
-
-    //     // Define the path where the image will be saved
-    //     // Ensure the 'images' directory exists under 'wwwroot'
-    //     var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", image.FileName);
-
-    //     // Create a new file stream where the image will be saved
-    //     using (var stream = System.IO.File.Create(filePath))
-    //     {
-    //         await image.CopyToAsync(stream);
-    //     }
-
-    //     // Optionally save the file path or any other relevant data to your database here
-
-    //     return Ok(new { message = "Image uploaded successfully!" });
-    // }
-    // [HttpPost]
-    // //[Authorize] Will uncomment after adding Identity to the project
-    // public async Task<ActionResult<Product>> CreateProduct(Product product)
-    // {
-    //     if (product == null)
-    //     {
-    //         return BadRequest("Product information is null");
-    //     }
-
-    //     var createdProduct = await _productRepository.CreateAsync(product);
-
-    //     // Following RESTful principles, return a 201 status code with a 'Location' header
-    //     // that contains the URL of the newly created product. Also, return the created entity.
-    //     return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
-    // }
     [HttpPost]
+    [Authorize] 
     public async Task<ActionResult<Product>> CreateProductWithImage([FromForm] ProductFormData formData)
     {
         // Validate the form data
@@ -141,22 +103,34 @@ public class ProductsController : ControllerBase
         // Create the product with the associated image path
         var product = formData.Product;
         product.ImagePath = filePath; // Save the image path in the product entity
-        var createdProduct = await _productRepository.CreateAsync(formData.Product);
-
-        // Return the created product
-        return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
+        try
+        {
+            var createdProduct = await _productRepository.CreateAsync(formData.Product);
+            // Return the created product
+            return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
+        }
+        catch (ArgumentException ex)
+        {
+            // Handle the duplicate product code error
+            return BadRequest("Product code already exists.");
+        }
     }
 
 
     // PUT: /Products/{id}
 
+
+    [Authorize] 
+
     [HttpPut("{id}")]
-
-    //[Authorize] Will uncomment after adding Identity to the project
-
-    public async Task<IActionResult> UpdateProduct(int id, Product product)
+    public async Task<IActionResult> UpdateProduct(int id, [FromForm] ProductFormData formData)
     {
-        if (id != product.Id)
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        if (id != formData.Product.Id)
         {
             return BadRequest("Product ID mismatch");
         }
@@ -167,15 +141,47 @@ public class ProductsController : ControllerBase
             return NotFound($"Product with ID {id} not found.");
         }
 
-        await _productRepository.UpdateAsync(product);
+        // Check if an image file is included in the request
+        if (formData.Image != null && formData.Image.Length > 0)
+        {
+            // Handle the image upload
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", formData.Image.FileName);
+            formData.Product.ImagePath = filePath;
 
-        return NoContent(); // 204 No Content is typically returned when an update is successful.
+            // Create a new file stream where the image will be saved
+            using (var stream = System.IO.File.Create(filePath))
+            {
+                await formData.Image.CopyToAsync(stream);
+            }
+
+            // Update the product entity's image path with the new image
+            existingProduct.ImagePath = filePath;
+        }
+        else if (formData.Image == null)
+        {
+            // If no image is provided, retain the existing image path
+            formData.Product.ImagePath = existingProduct.ImagePath;
+        }
+        // Update existing product details
+        existingProduct.Name = formData.Product.Name;
+        existingProduct.Price = formData.Product.Price;
+        existingProduct.ImagePath = formData.Product.ImagePath;
+        existingProduct.Category = formData.Product.Category;
+        existingProduct.DiscountRate = formData.Product.DiscountRate;
+        existingProduct.ProductCode = formData.Product.ProductCode;
+        existingProduct.MinimumQuantity = formData.Product.MinimumQuantity;
+        // Update additional fields as needed
+
+        await _productRepository.UpdateAsync(existingProduct);
+
+        return NoContent();
     }
+
 
     // DELETE: /Products/{id}
 
     [HttpDelete("{id}")]
-    //[Authorize] Will uncomment after adding Identity to the project
+    [Authorize] 
 
     public async Task<IActionResult> DeleteProduct(int id)
     {

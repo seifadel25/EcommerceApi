@@ -3,7 +3,10 @@ using Microsoft.EntityFrameworkCore;
 public class ProductRepository : IProductRepository
 {
     private readonly EcommerceContext _context;
-
+    private async Task<bool> CodeExist(string? code)
+    {
+        return await _context.Products.AnyAsync(u => u.ProductCode == code);
+    }
     public ProductRepository(EcommerceContext context)
     {
         _context = context;
@@ -21,6 +24,10 @@ public class ProductRepository : IProductRepository
 
     public async Task<Product> CreateAsync(Product product)
     {
+        if (await CodeExist(product.ProductCode))
+        {
+            throw new ArgumentException("Product with this code already exists.");
+        }
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
         return product;
@@ -33,6 +40,7 @@ public class ProductRepository : IProductRepository
         {
             throw new KeyNotFoundException($"Product with ID {productToUpdate.Id} not found.");
         }
+
 
         // Update properties
         existingProduct.Category = productToUpdate.Category;

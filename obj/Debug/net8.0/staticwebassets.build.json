@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vYuql/I6SS5CpJnIzVnyOsr4NQm31YbyEhGO1vucG0I=",
+  "Hash": "XWiBrnY/lxT1QrjFMF16ycN/BGT79UxfURPydo6sWAM=",
   "Source": "EcommerceApi",
   "BasePath": "_content/EcommerceApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EcommerceApi\\wwwroot",
       "Source": "EcommerceApi",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Breakfast 1.png",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Breakfast 1.png",
       "SourceId": "EcommerceApi",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "RelativePath": "images/Breakfast 1.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Breakfast 1.png"
     },
     {
-      "Identity": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Coffee 1.png",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\Coffee 1.png",
       "SourceId": "EcommerceApi",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "RelativePath": "images/Coffee 1.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Coffee 1.png"
     },
     {
-      "Identity": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsCider 1.png",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsCider 1.png",
       "SourceId": "EcommerceApi",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "RelativePath": "images/DonutsCider 1.png",
       "AssetKind": "All",
@@ -74,10 +74,48 @@
       "OriginalItemSpec": "wwwroot\\images\\DonutsCider 1.png"
     },
     {
-      "Identity": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\pexels-mariana-kurnyk-1756060.jpg",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\DonutsFilled 1.png",
       "SourceId": "EcommerceApi",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "BasePath": "_content/EcommerceApi",
+      "RelativePath": "images/DonutsFilled 1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\DonutsFilled 1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\FilledDonuts 1.png",
+      "SourceId": "EcommerceApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "BasePath": "_content/EcommerceApi",
+      "RelativePath": "images/FilledDonuts 1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\FilledDonuts 1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\pexels-mariana-kurnyk-1756060.jpg",
+      "SourceId": "EcommerceApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "RelativePath": "images/pexels-mariana-kurnyk-1756060.jpg",
       "AssetKind": "All",
@@ -93,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pexels-mariana-kurnyk-1756060.jpg"
     },
     {
-      "Identity": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\wpi-Cookies 1.png",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\images\\wpi-Cookies 1.png",
       "SourceId": "EcommerceApi",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\EcommerceApi\\wwwroot\\",
       "BasePath": "_content/EcommerceApi",
       "RelativePath": "images/wpi-Cookies 1.png",
       "AssetKind": "All",

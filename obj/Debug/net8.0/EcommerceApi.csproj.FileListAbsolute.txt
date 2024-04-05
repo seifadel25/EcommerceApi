@@ -137,3 +137,4 @@ C:\Users\Administrator\Documents\GitHub\EcommerceApi\bin\Debug\net8.0\runtimes\w
 C:\Users\Administrator\Documents\GitHub\EcommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 c:\Users\Administrator\Documents\GitHub\EcommerceApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 c:\Users\Administrator\Documents\GitHub\EcommerceApi\bin\Debug\net8.0\EcommerceApi.staticwebassets.runtime.json
+c:\Users\Administrator\Documents\GitHub\EcommerceApi\obj\Debug\net8.0\EcommerceApi.sourcelink.json
